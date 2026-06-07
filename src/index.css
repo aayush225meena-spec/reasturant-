@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@media print {
+  @page { margin: 0; }
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  nav, #reservations, #gallery, form, button, .lucide {
+    display: none !important;
+  }
+  #menu { break-before: always; }
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-emerald-950: #0D3B2A;
+  --color-emerald-900: #134E39;
+  --color-emerald-800: #1B654B;
+  
+  --color-gold-600: #B89626;
+  --color-gold-500: #D4AF37;
+  --color-gold-400: #E5C158;
+  --color-gold-300: #F2D57D;
+  
+  --color-cream-50: #FDF6EC;
+  --color-cream-100: #F5EAD4;
+}
+
+body {
+  @apply bg-cream-50 text-emerald-950 font-sans tracking-wide;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display tracking-tight;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF6EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B89626;
+}
